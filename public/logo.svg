@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 247.26 242.99">
+  <defs>
+    <radialGradient id="radial-gradient" cx="123.63" cy="121.49" fx="123.63" fy="121.49" r="122.57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff33b"/>
+      <stop offset=".04" stop-color="#fee62d"/>
+      <stop offset=".12" stop-color="#fdd51b"/>
+      <stop offset=".2" stop-color="#fdca0f"/>
+      <stop offset=".28" stop-color="#fdc70c"/>
+      <stop offset=".67" stop-color="#f3903f"/>
+      <stop offset=".89" stop-color="#ed683c"/>
+      <stop offset="1" stop-color="#e93e3a"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="123.63" cy="121.49" rx="123.63" ry="121.49" fill="url(#radial-gradient)"/>
+  <g>
+    <path d="M188.64,82.17c0-5.98,2.83-11.05,6.73-12.77-1.07-.41-2.2-.63-3.39-.63h-75.88c-6.16,0-11.15,6-11.15,13.4s4.99,13.4,11.15,13.4h75.88c1.18,0,2.32-.22,3.39-.63-3.9-1.72-6.73-6.79-6.73-12.77Z" fill="#231f20"/>
+    <path d="M185.21,85.17c0-5.98,2.83-11.05,6.73-12.77-1.07-.41-2.2-.63-3.39-.63h-75.88c-6.16,0-11.15,6-11.15,13.4s4.99,13.4,11.15,13.4h75.88c1.18,0,2.32-.22,3.39-.63-3.9-1.72-6.73-6.79-6.73-12.77Z" fill="#009444" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M182.64,142.34c0-6.32,2.83-11.67,6.73-13.49-1.07-.43-2.2-.67-3.39-.67h-75.88c-6.16,0-11.15,6.34-11.15,14.16,0,7.82,4.99,14.16,11.15,14.16h75.88c1.18,0,2.32-.24,3.39-.67-3.9-1.82-6.73-7.17-6.73-13.49Z" fill="#231f20"/>
+    <path d="M178.8,145.34c0-6.32,2.83-11.67,6.73-13.49-1.07-.43-2.2-.67-3.39-.67h-75.88c-6.16,0-11.15,6.34-11.15,14.16,0,7.82,4.99,14.16,11.15,14.16h75.88c1.18,0,2.32-.24,3.39-.67-3.9-1.82-6.73-7.17-6.73-13.49Z" fill="#f7941d" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M176.64,111.88c0-6.38,2.83-11.79,6.73-13.63-1.07-.44-2.2-.68-3.39-.68h-75.88c-6.16,0-11.15,6.4-11.15,14.3s4.99,14.3,11.15,14.3h75.88c1.18,0,2.32-.24,3.39-.68-3.9-1.84-6.73-7.24-6.73-13.63Z" fill="#231f20"/>
+    <path d="M173.15,114.88c0-6.38,2.83-11.79,6.73-13.63-1.07-.44-2.2-.68-3.39-.68h-75.88c-6.16,0-11.15,6.4-11.15,14.3s4.99,14.3,11.15,14.3h75.88c1.18,0,2.32-.24,3.39-.68-3.9-1.84-6.73-7.24-6.73-13.63Z" fill="#1c75bc" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M81.94,85.42c-5.76-1.63-9.92-5.49-10.61-9.37-.66.82-1.16,1.76-1.45,2.79l-18.83,66.36c-1.53,5.39,3.01,11.39,10.13,13.41,7.12,2.02,14.13-.71,15.66-6.09l18.83-66.36c.29-1.03.36-2.09.23-3.13-2.63,2.94-8.2,4.04-13.95,2.4Z" fill="#231f20" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M79.1,84.64c-5.76-1.63-9.92-5.49-10.61-9.37-.66.82-1.16,1.76-1.45,2.79l-18.83,66.36c-1.53,5.39,3.01,11.39,10.13,13.41,7.12,2.02,14.13-.71,15.66-6.09l18.83-66.36c.29-1.03.36-2.09.23-3.13-2.63,2.94-8.2,4.04-13.95,2.4Z" fill="#da1c5c" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <rect x="33.75" y="160.5" width="179.76" height="6.72" rx="2.65" ry="2.65" fill="#231f20" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <text transform="translate(66.57 188.57) scale(1.31 1)" fill="#231f20" font-family="TwCenMT-Condensed, &apos;Tw Cen MT Condensed&apos;" font-size="24"><tspan x="0" y="0">BOOK VAULT</tspan></text>
+  <text transform="translate(68.17 188.57) scale(1.31 1)" fill="#27aae1" font-family="TwCenMT-Condensed, &apos;Tw Cen MT Condensed&apos;" font-size="24"><tspan x="0" y="0">BOOK VAULT</tspan></text>
+</svg>
