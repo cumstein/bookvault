@@ -13,6 +13,7 @@ export function Header() {
             width={32}
             height={32}
             priority
+            className="w-8 h-8"
           />
           BookVault
         </Link>
