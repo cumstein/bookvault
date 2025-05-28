@@ -1,0 +1,21 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running lint..."
+npm run lint
+RESULT_LINT=$?
+
+echo "🧪 Running tests..."
+npm run test
+RESULT_TEST=$?
+
+echo "🏗️ Running build..."
+npm run build
+RESULT_BUILD=$?
+
+if [ $RESULT_LINT -ne 0 ] || [ $RESULT_TEST -ne 0 ] || [ $RESULT_BUILD -ne 0 ]; then
+  echo "❌ Push rejected: lint/test/build failed."
+  exit 1
+fi
+
+echo "✅ All checks passed. Pushing..."

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         📚 Welcome to <span className="text-primary">BookVault</span>
       </h1>
       <p className="text-muted-foreground text-lg">
-        Your personal book collection powered by GraphQL & Supabase.
+        Your personal book collection powered by GraphQL & Supabase. i'm awesome
       </p>
       <Button asChild>
         <Link href="/books">📖 View Vault</Link>
