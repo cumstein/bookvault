@@ -1,16 +1,75 @@
-import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import BooksPage from '@/app/books/page';
-import { ApolloProvider } from '@apollo/client';
-import client from '@/lib/apolloClient';
+import { render, screen, waitFor } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
+import BooksPage from '../books/page';
+import { GET_BOOKS } from '@/lib/graphql/queries/getBooks';
 
-describe('Books Page', () => {
-  it('renders loading initially', () => {
-    const { getByText } = render(
-      <ApolloProvider client={client}>
+const mockBooks = [
+  {
+    node: {
+      id: '1',
+      title: 'Test Book',
+      author: 'Test Author',
+      cover: '/test.jpg',
+    },
+  },
+];
+
+const mocks = [
+  {
+    request: { query: GET_BOOKS },
+    result: {
+      data: {
+        booksCollection: {
+          edges: mockBooks,
+        },
+      },
+    },
+  },
+];
+
+describe('BooksPage', () => {
+  it('shows loading skeletons while loading', async () => {
+    render(
+      <MockedProvider mocks={mocks} addTypename={false}>
         <BooksPage />
-      </ApolloProvider>
+      </MockedProvider>
     );
-    expect(getByText(/Loading/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(
+        document.querySelectorAll('[data-slot="skeleton"]').length
+      ).toBeGreaterThan(0);
+    });
+  });
+
+  it('renders book cards when data is loaded', async () => {
+    render(
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <BooksPage />
+      </MockedProvider>
+    );
+    await waitFor(() =>
+      expect(screen.getByText('Test Book')).toBeInTheDocument()
+    );
+    expect(screen.getByText('Test Author')).toBeInTheDocument();
+  });
+
+  it('shows error message on error', async () => {
+    render(
+      <MockedProvider
+        mocks={[
+          {
+            request: { query: GET_BOOKS },
+            error: new Error('An error occurred'),
+          },
+        ]}
+        addTypename={false}
+      >
+        <BooksPage />
+      </MockedProvider>
+    );
+    await waitFor(() =>
+      expect(screen.getByText(/error loading books/i)).toBeInTheDocument()
+    );
   });
 });
