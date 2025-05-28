@@ -4,6 +4,7 @@ export interface Book {
   author: string;
   description?: string;
   created_at: string;
+  cover: string;
 }
 
 export interface BookEdge {

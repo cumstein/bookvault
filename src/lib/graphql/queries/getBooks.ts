@@ -10,6 +10,7 @@ export const GET_BOOKS = gql`
           author
           description
           created_at
+          cover
         }
       }
     }

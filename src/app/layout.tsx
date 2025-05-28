@@ -1,35 +1,43 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Inter } from 'next/font/google';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 import ClientProviders from '@/lib/providers/ClientProviders';
+import { ThemeProvider } from '@/lib/providers/ThemeProvider';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Book Vault',
-  description: 'Manage your Books',
+  description: 'A modern GraphQL-powered book collection app',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={
+          inter.className +
+          ' bg-background text-foreground min-h-screen flex flex-col'
+        }
       >
-        <ClientProviders>{children}</ClientProviders>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="flex-grow container mx-auto px-4 py-6">
+            <ClientProviders>{children}</ClientProviders>
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
