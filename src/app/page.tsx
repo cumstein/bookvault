@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import React from 'react';
+import { FaBookSkull } from 'react-icons/fa6';
 
 export default function Home() {
   return (
