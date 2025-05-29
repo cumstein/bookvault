@@ -69,7 +69,7 @@ describe('BooksPage', () => {
       </MockedProvider>
     );
     await waitFor(() =>
-      expect(screen.getByText(/error loading books/i)).toBeInTheDocument()
+      expect(screen.getByText(/couldn't load your books/i)).toBeInTheDocument()
     );
   });
 });
