@@ -2,8 +2,8 @@ import BookDetails from '@/components/books/BookDetails';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-export default async function BookPage({ params }: { params: { id: string } }) {
-  const { id } = await params;
+export default function BookPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   return (
     <div className="p-6">
       <Link
