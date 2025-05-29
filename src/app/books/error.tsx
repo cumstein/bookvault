@@ -6,7 +6,7 @@ export default function Error({ reset }: { reset: () => void }) {
       <div className="text-6xl mb-4">😢</div>
       <h2 className="text-2xl font-bold mb-2">Something went wrong</h2>
       <p className="text-muted-foreground mb-6">
-        We couldn't load your books. Please try again.
+        We couldn&apos;t load your books. Please try again.
       </p>
       <button
         onClick={() => reset()}
